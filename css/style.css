@@ -36,12 +36,14 @@ body {
 .header{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     height: 200px;
     background-image: url(/images/homepage-foto.jpg);
     background-size: cover;
     background-position: center;
+    z-index: 1500;
+    padding: var(--spacer);
 
 }
 /*
@@ -378,6 +380,7 @@ media query pro Tablet
     }
     .header{
         justify-content: space-between;
+        padding: 0;
 
     }
 
