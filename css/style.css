@@ -33,7 +33,18 @@ body {
 
 }
 
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-image: url(/images/homepage-foto.jpg);
+    background-size: cover;
+    background-position: center;
 
+}
+/*
 .menu{
     background-image: url(/images/homepage-foto.jpg);
     background-size: cover;
@@ -42,8 +53,10 @@ body {
     height: 200px;
     padding: var(--spacer);
     color: var(--secondary);
-    
+    position: absolute;
+
 }
+*/
 .motto{
     text-align: center;
     color: var(--secondary);
@@ -52,6 +65,7 @@ body {
     font-style: oblique;
     padding: 15px;
     margin: 0;
+    
 }
 .category{
     text-align: center;
@@ -96,11 +110,15 @@ začátek stylování hamburger menu
 .menu__toggler{
     font-size: var(--spacer);
     font-weight: bold;
+    cursor: pointer;
+    padding-left: var(--spacer) ;
+    padding-top: var(--spacer);
+    color: white;
 }
 .menu__list{
 	display: none;
 	margin: 0;
-	padding: 0;;
+	padding: 0;
 	list-style: none;
 	background-color: var(--hamburger)
 }
@@ -132,6 +150,10 @@ začátek stylování hamburger menu
 	.menu__toggler{
 		display: none;
         font-size:var(--spacer);
+        cursor: pointer;
+        font-size: var(--spacer);
+        font-weight: bold;
+        
 	}
 	.menu__list{
 		display: flex;
@@ -354,6 +376,8 @@ media query pro Tablet
         grid-template-columns: repeat(2, 1fr);
         margin-top: var(--spacer-quarter);
     }
+    .header{
+        justify-content: space-between;
 
     }
 
@@ -382,7 +406,7 @@ media query pro PC
         left: 0;
         top: 0;
         width: 100%;
-        height: 100px;
+        height: 230px;
         background-color: var(--primary);
     }
     body{
