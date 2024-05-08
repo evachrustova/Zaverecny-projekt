@@ -83,6 +83,10 @@ ul{
 začátek stylování hamburger menu
 *************************************
 */
+.menu{
+    position: relative;
+    z-index: 1000;
+    }
 .menu__checkbox{
 	position: absolute;
 	left: -9999px;
@@ -389,7 +393,9 @@ media query pro PC
         padding: 0;
         height: 230px;
         border-radius: 0 0 5px 5px;
+        
     }
+
     .menu__list{
         display: flex;
     }
