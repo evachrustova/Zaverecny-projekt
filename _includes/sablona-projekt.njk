@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            
+            <nav class="menu">
+                
+                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu__toggler">☰</label>
+                
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="/">Domů</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/destinace/">Destinace</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/tipy">Tipy</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/onas/">O nás</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/fotogalerie/">Fotogalerie</a></li>
+                </ul>
+                <p class="motto">{{ title }}</p>
+                
+                
+
+            </nav>
+        </header>
+        
+        <main class="main">
+            {{ content | safe }}
+        </main>
+
+
+        <footer class="footer">
+            @ Cestou necestou, 2024
+        </footer>
+
+
+    </div>
+
+
+    
+</body>
+</html>

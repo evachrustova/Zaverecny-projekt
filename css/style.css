@@ -1,0 +1,493 @@
+html { 
+    box-sizing: border-box; 
+}
+*, ::before, ::after {
+     box-sizing: inherit; 
+}
+
+:root{
+    --primary:#d8dfe633;
+    --secondary: white;
+    --hamburger: #0e7892;
+
+    --font-default: 'Montserrat', sans-serif;
+    --font-special: 'Relaway', sans-serif;
+
+    --spacer: 20px;
+    --spacer-half: calc(var(--spacer)/2);
+    --spacer-quarter: calc(var(--spacer)/4);
+    --spacer-thirdquarter: calc(var(--spacer)/4*3);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-default);
+    background-color: var(--primary);
+}
+
+.wrapper {
+	max-width: 80rem;
+	margin: 0 auto;
+	background-color: var(--primary);
+    /*rgba(175, 191, 212, 0.329);*/
+
+}
+
+
+.menu{
+    background-image: url(/images/homepage-foto.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    padding: var(--spacer);
+    color: var(--secondary);
+    
+}
+.motto{
+    text-align: center;
+    color: var(--secondary);
+    font-size: 50px;
+    font-weight: bold;
+    font-style: oblique;
+    padding: 15px;
+    margin: 0;
+}
+.category{
+    text-align: center;
+    color: var(--secondary);
+    font-size: var(--spacer);
+    padding-bottom: var(--spacer-half);
+    margin: 0;
+
+}
+ul{
+    line-height: 1.5;
+}
+
+.container__text:hover{
+    transform:scale(1.2);
+    background-color: rgba(73, 68, 68, 0.849);
+
+}
+
+
+@media screen and (max-width: 850px) {
+    .box__right{
+        display: none;
+    }
+}
+
+/* 
+**********************************
+začátek stylování hamburger menu
+*************************************
+*/
+.menu__checkbox{
+	position: absolute;
+	left: -9999px;
+    
+
+}
+.menu__toggler{
+    font-size: var(--spacer);
+    font-weight: bold;
+}
+.menu__list{
+	display: none;
+	margin: 0;
+	padding: 0;;
+	list-style: none;
+	background-color: var(--hamburger)
+}
+.menu__item{
+	border-bottom: 1px solid white;
+}
+.menu__link{
+	display: block;
+	padding: 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.menu__link:hover{
+	background-color: rgb(7, 194, 207);
+}
+
+@media screen and (max-width: 600px) {
+	.menu__checkbox:checked ~ .menu__list {
+	display: block;
+    }
+    .box__right{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 599px) {
+	.menu__toggler{
+		display: none;
+        font-size:var(--spacer);
+	}
+	.menu__list{
+		display: flex;
+        justify-content: center;
+	}
+	.menu__item{
+		border-bottom: 0;
+		 
+        
+	}	
+}
+
+/*
+******************************************* 
+konec stylování hamburger menu
+*********************************************
+*/
+.footer{
+    background-color: var(--hamburger);
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    align-self: center;
+    padding: var(--spacer) var(--spacer-half);
+    
+}
+.container__sardinie,
+.container__korsika,
+.container__seznamcesta,
+.container__platby,
+.container__andalusie,
+.container__apulie,
+.container__letenky,
+.container__ubytovani,
+.container__onas,
+.container__kontakt,
+.container__fotogalerie,
+.container__lekarnicka,
+.container__salzbursko,
+.container__slovinsko,
+.container__tyrolsko,
+.container__sicilie,
+.container__portugalsko{
+    height: 250px;
+    padding: var(--spacer);
+    border-radius: var(--spacer);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align: center;
+    border: var(--hamburger);
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+}
+
+.container__sardinie:hover,
+.container__korsika:hover,
+.container__seznamcesta:hover,
+.container__platby:hover,
+.container__andalusie:hover,
+.container__apulie:hover,
+.container__letenky:hover,
+.container__ubytovani:hover,
+.container__onas:hover,
+.container__kontakt:hover,
+.container__fotogalerie:hover,
+.container__lekarnicka:hover,
+.container__salzbursko:hover,
+.container__slovinsko:hover,
+.container__tyrolsko:hover,
+.container__sicilie:hover,
+.container__portugalsko:hover{
+    border: 3px solid white;
+    transform: scale(1.05);
+}
+
+.container__sardinie{
+    background-image: url(/images/Sardínie.jpg);   
+}
+.container__korsika{
+    background-image: url(/images/Korsika.jpg);
+}
+.container__seznamcesta{
+    background-image: url(/images/seznam_nacestu.jpg);
+}
+.container__platby{
+    background-image: url(/images/platby.jpg);
+}
+.container__andalusie{
+    background-image: url(/images/Andalusia.jpg);
+}
+.container__apulie{
+    background-image: url(/images/Apulia.jpg);
+}
+.container__letenky{
+    background-image: url(/images/letenky.jpg);
+}
+.container__ubytovani{
+    background-image: url(/images/ubytovani.jpg);
+}
+.container__onas{
+    background-image: url(/images/onas.jpg);
+}
+.container__kontakt{
+    background-image: url(/images/Kontakt.jpg);
+}
+.container__fotogalerie{
+    background-image: url(/images/fotogalerie.jpg);
+}
+.container__lekarnicka{
+    background-image: url(/images/lékarnička.jpg);
+}
+.container__portugalsko{
+    background-image: url(/images/portugalsko.jpg);
+}
+.container__salzbursko{
+    background-image: url(/images/salzbursko.jpg);
+}
+.container__slovinsko{
+    background-image: url(/images/slovinsko.jpg);
+}
+.container__tyrolsko{
+    background-image: url(/images/tyrolsko.jpg);
+}
+.container__sicilie{
+    background-image: url(/images/sicílie.jpg);
+}
+
+
+.photo{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacer) 0 var(--spacer) 0;
+    
+}
+
+.container__text{
+    text-decoration: none;
+    align-self: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: var(--spacer-quarter);
+    flex-shrink: 1;
+    border-radius: 15px;
+    
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    align-self: center;
+    padding: var(--spacer) var(--spacer-half);
+    height:auto;
+
+}
+.box__bottom{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    align-self: center;
+
+}
+.box__content,
+.box__right,
+.box__photo{
+    height: auto;
+    padding: var(--spacer);
+    border-radius: var(--spacer);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border: var(--hamburger);
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+
+.galerie{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacer-quarter);
+}
+
+.galerie__photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box__email{
+    color: black;
+}
+
+
+/* 
+**********************************
+media query pro Tablet
+*************************************
+*/
+@media screen and (min-width: 601px) {
+    .container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacer-thirdquarter);
+    padding: var(--spacer) var(--spacer-half);
+    align-self: center;
+    }
+    .galerie{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: var(--spacer-quarter);
+    }
+
+    }
+
+
+
+    /* 
+**********************************
+media query pro PC
+*************************************
+*/
+
+@media screen and (min-width: 850px) {
+    .footer{
+        padding: 15px 30px;
+        background-color: var(--hamburger);
+        color: white;
+        text-align: center;
+        
+    }
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background-color: var(--primary);
+    }
+    body{
+        padding-top: 230px;
+    }
+    
+    .menu{
+        padding: 0;
+        height: 230px;
+        border-radius: 0 0 5px 5px;
+    }
+    .menu__list{
+        display: flex;
+    }
+
+    .box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        align-self: center;
+        padding: var(--spacer) var(--spacer-half);
+        height:auto;
+        }
+
+
+    .box__bottom{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .box__content{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .box__right{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .box__bottom{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .box__photo:hover{
+        transform: scale(1.05);
+    }
+    .galerie{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*++++++++++++++++++++++++++++++zkouška ++++++++++++++++++++++
+    .homepage{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap:var(--spacer-half);
+        padding: var(--spacer-half);
+        
+    }
+    .homepage__photo{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: var(--spacer);
+        max-height: 250px;
+        
+    }
+
+    .homepage__tile{
+        position: relative;
+        
+    }
+    .homepage__tile:hover{
+        border: 3px solid white;
+        transform: scale(1.05);
+        border-radius: var(--spacer);
+    }
+
+    .homepage__button{
+        position: absolute;
+        text-decoration: none;
+        align-self: center;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: var(--spacer-quarter);
+        flex-shrink: 1;
+        border-radius: 15px;
+
+    }
+    .homepage__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+    
+
+    */
+
+
+    
+
+
+}
